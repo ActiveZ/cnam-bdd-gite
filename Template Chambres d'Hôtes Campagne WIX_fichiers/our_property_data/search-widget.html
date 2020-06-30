@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html ng-app="searchWidget" class="ng-scope" lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="utf-8">
+    <!-- base href="https://hotels.wixapps.net/search-widget.html?cacheKiller=1593398924926&compId=hzi591ja&deviceType=desktop&height=89&instance=FIkD67utDtxeVnGd3nHJjo3odcyzuiZHmfq92yc3TD0.eyJpbnN0YW5jZUlkIjoiOWRlZTUxMjUtNmU4Yi00YzQwLWE3OTYtYjBlODZjNWIxMmYxIiwiYXBwRGVmSWQiOiIxMzVhYWQ4Ni05MTI1LTYwNzQtNzM0Ni0yOWRjNmEzYzliY2YiLCJtZXRhU2l0ZUlkIjoiN2E1ODJmNzEtMDBjNS00ZmZiLTg4OGItNTg3YWQ0M2Y2MDllIiwic2lnbkRhdGUiOiIyMDIwLTA2LTI5VDA3OjU0OjIzLjE3M1oiLCJkZW1vTW9kZSI6dHJ1ZSwib3JpZ2luSW5zdGFuY2VJZCI6ImY2OTU1N2U4LTlhOTMtNDE4OC1iNDhlLTc4YWFhYzJkMTEzMCIsImFpZCI6IjY4OTAzNTQ2LTE3MTItNGE3YS05ZWM1LTE4ZDFjNDYyNmQwMSIsImJpVG9rZW4iOiJlN2I2N2U1NC02ZTRlLTAzYmItMmYxZC1lODkyYjg2NDcyNmYiLCJzaXRlT3duZXJJZCI6ImYyOTIzZGEwLTNhNzAtNGQyNi04ZDgwLWIzMjI3ZTlmZTk3MyIsInNpdGVJc1RlbXBsYXRlIjp0cnVlfQ&locale=fr&pageId=mainPage&siteRevision=34&viewMode=site&viewerCompId=hzi591ja&width=980" -->
+    <!-- base href="https://static.parastorage.com/services/hotels-statics/1.677.0/" -->
+    <title>Search Widget</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!--  -->
+<link rel="stylesheet" href="search-widget_data/search-widget.css">
+<!--  -->
+
+    <script type="text/javascript">
+  (function () {
+    var appName = window.fedopsAppName = 'hotels-statics-search-widget';
+    window.fedops = window.fedops || {};
+    window.fedops.apps = window.fedops.apps || {};
+    window.fedops.apps[appName] = { startLoadTime: window.performance && window.performance.now && window.performance.now() };
+    try { window.fedops.sessionId = window.localStorage.getItem('fedops.logger.sessionId'); } catch(e) {};
+    window.fedops.sessionId = window.fedops.sessionId || 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) { var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8); return v.toString(16); });
+    (new Image()).src = '//frog.wix.com/fed?appName=' + appName + '&src=72&evid=14&session_id=' + window.fedops.sessionId + '&_=' + Math.random();
+  })();
+</script>
+
+
+    <script src="index_data/jquery-1.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="index_data/wix.js"></script>
+
+<script>(function(){Wix.Performance.applicationLoadingStep(0,'loading scripts');})();</script>
+
+<script type="text/javascript">
+  // hack for rewriting URL from index.html/rooms?param=x to index.html/rooms?param=x#/rooms?param=x
+  (function() {
+    var currentUrl = document.URL;
+    var regex = /(.*\.html)\/(.*)/gi;
+    var match = regex.exec(currentUrl);
+    if (match && match[2]) {
+      var args = match[2].replace(/#.*$/, '');
+      args = args.replace(/&?cacheKiller.*$/, '');
+      args = args.replace(/&?compId.*$/, ''); // after Santa the order of arguments changed
+      window.location.hash = '/' + args;
+    }
+  })();
+</script>
+
+<script async="" src="index_data/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
+  gtag('js', new Date());
+
+  gtag('config', 'AW-723021278');
+</script>
+
+<style wix-style="" ng-non-bindable="">
+  :focus {
+    outline: 0;
+  }
+  body {
+    font-family: 'Open Sans';
+    style.descriptionFont;
+    line-height: normal;
+    font-size: 16px;
+  }
+  button {
+    font-family: 'Open Sans';
+    style.descriptionFont;
+    line-height: 1;
+  }
+  body, button {
+    color: rgba(224,212,190,1);
+  }
+  .s-description, .s-description:hover {
+    fill: rgba(224,212,190,1) !important;
+    color: rgba(224,212,190,1) !important;
+  }
+  .s-description-font {
+    font-family: 'Open Sans';
+    style.descriptionFont !important;
+  }
+  .amenities {
+    fill: #000;
+    stroke: #000;
+    fill: rgba(224,212,190,1);
+    stroke: rgba(224,212,190,1);
+  }
+
+  .calendar-button {
+    fill: rgba(96,5,5,1);
+    stroke: rgba(96,5,5,1) !important;
+  }
+  .s-background {
+    background-color: rgba(58,4,4,1) !important;
+  }
+  .s-background2 {
+    background-color: #E0D4BE !important;
+  }
+  .s-button {
+    fill: rgba(242,239,233,1);
+    background-color: rgba(221,151,75,1) !important;
+    color: rgba(242,239,233,1) !important;
+  }
+  .s-button-color {
+    color: rgba(221,151,75,1) !important;
+    fill: rgba(221,151,75,1);
+    stroke: rgba(221,151,75,1);
+  }
+  .s-button-inverse {
+    background-color: rgba(242,239,233,1) !important;
+    color: rgba(221,151,75,1) !important;
+    border: 1px solid rgba(221,151,75,1) !important;
+  }
+  .s-separator, .s-separator-after:after, .s-separator-before:before {
+    border-color: rgba(221,151,75,0.01639344262295082) !important;
+  }
+  .s-title {
+    color: rgba(221,151,75,1) !important;
+    fill: rgba(221,151,75,1) !important;
+    font-family: 'Open Sans';
+    style.titleFont;
+    line-height: normal;
+  }
+  a:hover {
+    color: rgba(221,151,75,1) !important;
+  }
+  .s-field {
+    color: rgba(96,5,5,1) !important;
+    background-color: #FFFFFF !important;
+  }
+</style>
+
+    <style wix-style="" ng-non-bindable="">
+      .spinner a[ng-click]::after {
+        border-bottom-color: rgba(96,5,5,1) !important;
+        border-top-color: rgba(96,5,5,1)  !important;
+      }
+      .spinner a[ng-click]:not([disabled]):hover {
+        background-color: rgba(96,5,5,1) !important;
+      }
+      .spinner a[ng-click]:not([disabled]):hover::after {
+        border-bottom-color: #FFFFFF !important;
+        border-top-color: #FFFFFF !important;
+      }
+
+      [wix-date-picker] {
+        fill: rgba(96,5,5,1);
+        stroke: rgba(96,5,5,1);
+      }
+
+    </style>
+
+  <style id="fedops-logger-angular.stylable.bundle.css"></style><style wix-style="">.Title{ font:normal normal normal 42px/1.2em niconne,fantasy; } .Menu{ font:normal normal normal 14px/1.2em "open sans",sans-serif; } .Page-title{ font:normal normal normal 32px/1.2em "open sans",sans-serif; } .Heading-XL{ font:normal normal normal 60px/1.2em "open sans",sans-serif; } .Heading-L{ font:normal normal normal 40px/1.2em "open sans",sans-serif; } .Heading-M{ font:normal normal normal 26px/1.2em "open sans",sans-serif; } .Heading-S{ font:normal normal normal 20px/1.2em "open sans",sans-serif; } .Body-L{ font:normal normal normal 16px/1.2em "open sans",sans-serif; } .Body-M{ font:normal normal normal 12px/1.2em verdana,geneva,sans-serif; } .Body-S{ font:normal normal normal 12px/1.2em "open sans",sans-serif; } .Body-XS{ font:normal normal normal 10px/1.2em "open sans",sans-serif; } }</style><style>:focus { box-shadow: inset 0 0 0 1px rgba(255,255,255,0.9), 0 0 1px 2px #3899EC; }</style><link type="text/css" rel="stylesheet" href="index_data/css.css" id="wix-google-fonts"><link type="text/css" rel="stylesheet" href="index_data/languages.css"></head>
+  <body>
+    <div class="icons" style="display:none;">
+      <svg xmlns="http://www.w3.org/2000/svg"><symbol viewBox="-495 320.9 200 200" id="calendar"><title>calendar</title> <style type="text/css">
+ .st0{display:none;} .st1{display:inline;} 
+.st2{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+ .st3{} .st4{fill:none;stroke-linejoin:round;stroke-miterlimit:10;} 
+.st5{fill:#FFFFFF;stroke-linejoin:round;stroke-miterlimit:10;} 
+.st6{fill:none;stroke-linecap:round;stroke-linejoin:round;} 
+.st7{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.5671,2.2685;}
+ .st8{fill:none;stroke-width:11;stroke-miterlimit:10;} 
+.st9{fill:none;stroke-width:11;stroke-linecap:round;stroke-miterlimit:10;}
+ </style> <g id="svgstore92fe1316c6d20206271995a1baf2428bwifi" class="st0"> <g class="st1"> <path class="st2" d="M-301,357.9c-28-14-60-23-94-23s-66,8-94,23"></path> <path class="st2" d="M-332,404.9c-19-10-40-15-63-15s-44,6-63,15"></path> <path class="st2" d="M-364,450.9c-9-5-20-8-31-8s-22,3-31,8"></path> <path class="st3" d="M-387,495.9c-2-1-5-2-8-2s-5,1-8,2c-4,2-6,7-6,11c0,8,6,14,14,14s14-6,14-14C-381,502.9-384,498.9-387,495.9z
+			"></path> </g> </g> <g id="svgstore92fe1316c6d20206271995a1baf2428bkitchen" class="st0"> <g class="st1"> <g> <path class="st4" d="M-316,452.9"></path> <path class="st2" d="M-320,514.9v-154v-33c-25,7-36,55-36,102h36"></path> </g> <g> <g> <path class="st2" d="M-419,327.9v36c0,25,1,39-23,39h-16c-24,0-22-13-22-38v-37"></path> </g> <path class="st2" d="M-465,324.9"></path> <path class="st2" d="M-465,376.9"></path> <path class="st2" d="M-444,324.9"></path> <path class="st2" d="M-444,376.9"></path> <line class="st2" x1="-450" y1="514.9" x2="-450" y2="327.9"></line> <path class="st2" d="M-410,366.9"></path> <path class="st2" d="M-489,366.9"></path> </g> </g> </g> <g id="svgstore92fe1316c6d20206271995a1baf2428bphone" class="st0"> <g class="st1"> <path class="st4" d="M-433,394.9l22-22c2-2,2-5,0-8l-35-34c-4-4-11-4-15,0l-15,14c-20,20-17,49,2,69l84,84c20,20,49,22,69,2l18-18
+			c2-2,2-5,0-8l-42-41c-2-2-5-2-8,0l-22,22L-433,394.9z"></path> </g> </g> <g id="svgstore92fe1316c6d20206271995a1baf2428btv" class="st0"> <g class="st1"> <g> <path class="st4" d="M-313,514.9h-164c-6,0-10-4-10-10v-123c0-5,4-10,10-10h165c5,0,10,5,10,10v123
+				C-303,510.9-307,514.9-313,514.9z"></path> <path class="st4" d="M-346,483.9h-98c-6,0-10-5-10-10v-61c0-5,4-10,10-10h98c6,0,10,5,10,10v61C-336,479.9-341,483.9-346,483.9z"></path> <g> <line class="st2" x1="-411" y1="371.9" x2="-447" y2="326.9"></line> <line class="st2" x1="-343" y1="326.9" x2="-379" y2="371.9"></line> </g> </g> </g> </g> <g id="svgstore92fe1316c6d20206271995a1baf2428bsmoking" class="st0"> <g class="st1"> <path class="st2" d="M-306,514.9h-178c-3,0-5-2-5-5v-31c0-3,2-5,5-5h178c3,0,5,2,5,5v31C-301,512.9-303,514.9-306,514.9z"></path> <line class="st2" x1="-336" y1="474.9" x2="-336" y2="514.9"></line> <g> <path class="st4" d="M-316,439.9c-32,0,32-60,0-60"></path> <path class="st4" d="M-335,395.9c-32,0,32-60,0-60"></path> </g> </g> </g> <g id="svgstore92fe1316c6d20206271995a1baf2428bmini_bar" class="st0"> <g class="st1"> <line class="st4" x1="-429" y1="455.9" x2="-461" y2="455.9"></line> <line class="st4" x1="-429" y1="482.9" x2="-461" y2="482.9"></line> <path class="st4" d="M-461,341.9v52c0,23-24,21-24,49v65c0,9,8,7,17,7h45c9,0,17,2,17-7v-65c0-28-24-26-24-49v-52H-461z"></path> <path class="st3" d="M-442,354.9h-7c-3,0-5-2-5-5v-22c0-3,2-5,5-5h7c3,0,5,2,5,5v22C-437,352.9-439,354.9-442,354.9z"></path> </g> <g class="st1"> <g> <line class="st4" x1="-344" y1="466.9" x2="-344" y2="514.9"></line> <line class="st4" x1="-367" y1="514.9" x2="-321" y2="514.9"></line> </g> <path class="st5" d="M-343,468.9c21,0,39-17,39-39s-8-36-8-36h-61c0,0-8,14-8,36S-365,468.9-343,468.9L-343,468.9z"></path> <line class="st4" x1="-381" y1="424.9" x2="-306" y2="424.9"></line> </g> </g> <g id="svgstore92fe1316c6d20206271995a1baf2428bshower" class="st0"> <g class="st1"> <g> <path class="st2" d="M-465,512.9v-143c0-23,19-42,42-42s42,19,42,42"></path> </g> <path class="st2" d="M-330,411.9v-10c0-18-15-33-33-33h-28c-18,0-33,15-33,33v10l-14,12v15h120v-15L-330,411.9z"></path> <g> <g> <line class="st6" x1="-418" y1="456.9" x2="-418" y2="459.9"></line> <line class="st7" x1="-418" y1="482.9" x2="-418" y2="499.9"></line> <line class="st6" x1="-418" y1="510.9" x2="-418" y2="512.9"></line> </g> </g> <g> <g> <line class="st6" x1="-390" y1="456.9" x2="-390" y2="459.9"></line> <line class="st7" x1="-390" y1="482.9" x2="-390" y2="499.9"></line> <line class="st6" x1="-390" y1="510.9" x2="-390" y2="512.9"></line> </g> </g> <g> <g> <line class="st6" x1="-363" y1="456.9" x2="-363" y2="459.9"></line> <line class="st7" x1="-363" y1="482.9" x2="-363" y2="499.9"></line> <line class="st6" x1="-363" y1="510.9" x2="-363" y2="512.9"></line> </g> </g> <g> <g> <line class="st6" x1="-336" y1="456.9" x2="-336" y2="459.9"></line> <line class="st7" x1="-336" y1="482.9" x2="-336" y2="499.9"></line> <line class="st6" x1="-336" y1="510.9" x2="-336" y2="512.9"></line> </g> </g> </g> </g> <g id="svgstore92fe1316c6d20206271995a1baf2428bLayer_9" class="st0"> <g class="st1"> <g> <line class="st2" x1="-439" y1="494.9" x2="-452" y2="513.9"></line> </g> <path class="st2" d="M-395,405.9h-92c0,0,0,5,0,11s5,11,11,11h4c0,30,2,67,47,67h29"></path> <g> <line class="st2" x1="-351" y1="494.9" x2="-338" y2="513.9"></line> </g> <path class="st2" d="M-395,405.9h92c0,0,0,5,0,11s-5,11-11,11h-4c0,30-2,67-47,67h-29"></path> <g> <path class="st2" d="M-446,405.9v-52c0-10,8-17,17-17s17,8,17,17"></path> </g> </g> </g> <g id="svgstore92fe1316c6d20206271995a1baf2428bwork" class="st0"> <g class="st1"> <path class="st2" d="M-488,511.9v-176c0-5,4-9,9-9h167c5,0,9,4,9,9v176"></path> <path class="st4" d="M-437,404.9v-78h126c5,0,9,4,9,9v69H-437z"></path> <path class="st3" d="M-363,355.9c-2-1-4-2-7-2s-5,1-6,2c-3,2-5,6-5,10c0,7,5,12,12,12s12-5,12-12C-358,361.9-360,357.9-363,355.9z
+			"></path> </g> </g> <g id="svgstore92fe1316c6d20206271995a1baf2428btowels" class="st0"> <g class="st1"> <g> <line class="st2" x1="-358" y1="357.9" x2="-301" y2="357.9"></line> </g> <g> <line class="st2" x1="-489" y1="357.9" x2="-460" y2="357.9"></line> </g> <path class="st2" d="M-358,467.9v-123c0-9,7-16,16-16s16,7,16,16v168h-111v-44"></path> <path class="st2" d="M-460,467.9v-123c0-9,7-16,16-16"></path> <line class="st4" x1="-443" y1="327.9" x2="-342" y2="327.9"></line> <line class="st4" x1="-358" y1="467.9" x2="-460" y2="467.9"></line> <line class="st4" x1="-460" y1="440.9" x2="-358" y2="440.9"></line> </g> </g> <path class="st8" d="M-318.6,514.7h-152.8c-7.7,0-14-6.3-14-14V354.1c0-7.7,6.3-14,14-14h152.8c7.7,0,14,6.3,14,14v146.6
+	C-304.6,508.4-310.9,514.7-318.6,514.7z"></path> <line class="st8" x1="-485.4" y1="387.9" x2="-304.6" y2="387.9"></line> <line class="st9" x1="-451.1" y1="326.8" x2="-451.1" y2="353.4"></line> <line class="st9" x1="-338.9" y1="326.8" x2="-338.9" y2="353.4"></line> </symbol></svg>    </div>
+
+    <!-- Add your site or application content here -->
+    <div ng-controller="SearchWidgetCtrl" class="ng-scope">
+      <!-- ngIf: $root.languageResolved --><!-- ngInclude: 'views/search-widget.html' --><div class="search-widget ng-scope" ng-include="'views/search-widget.html'" ng-if="$root.languageResolved">
+<div id="search-widget" ng-controller="WidgetCtrl" ng-class="{'no-children': !settings.showChildren, 'show-all': settings.showChildren}" class="s-background ng-scope show-all">
+  <form name="search_form" novalidate="" class="ng-pristine ng-valid">
+    <ul class="elements" role="presentation">
+      <li class="title s-separator" role="presentation">
+        <h2 class="s-title widget-title" stranslate="widget.TITLE"><span class="strans">Réservez votre séjour</span></h2>
+      </li>
+      <li class="check-in" role="presentation">
+        <label id="check-in-label" for="check-in" stranslate="widget.CHECK_IN"><span class="strans">Arrivée</span></label>
+        <button wix-date-picker="" tabindex="0" type="button" ng-model="filters.checkIn" id="check-in" after="1593381264458" mark="markCheckin" trigger-on="[['open-checkin', 'click'], ['focus:check_in', 'focus']]" trigger-bubble="" name="check_in" class="s-field s-separator ng-pristine ng-valid ng-isolate-scope ng-empty ng-touched" aria-labelledby="check-in-label" aria-describedby="check-in-value" aria-expanded="false">
+          <wix-svg icon="calendar" class="icon"><svg viewBox="0 0 200 200"><use xlink:href="https://hotels.wixapps.net/search-widget.html?cacheKiller=1593398924926&amp;compId=hzi591ja&amp;deviceType=desktop&amp;height=89&amp;instance=FIkD67utDtxeVnGd3nHJjo3odcyzuiZHmfq92yc3TD0.eyJpbnN0YW5jZUlkIjoiOWRlZTUxMjUtNmU4Yi00YzQwLWE3OTYtYjBlODZjNWIxMmYxIiwiYXBwRGVmSWQiOiIxMzVhYWQ4Ni05MTI1LTYwNzQtNzM0Ni0yOWRjNmEzYzliY2YiLCJtZXRhU2l0ZUlkIjoiN2E1ODJmNzEtMDBjNS00ZmZiLTg4OGItNTg3YWQ0M2Y2MDllIiwic2lnbkRhdGUiOiIyMDIwLTA2LTI5VDA3OjU0OjIzLjE3M1oiLCJkZW1vTW9kZSI6dHJ1ZSwib3JpZ2luSW5zdGFuY2VJZCI6ImY2OTU1N2U4LTlhOTMtNDE4OC1iNDhlLTc4YWFhYzJkMTEzMCIsImFpZCI6IjY4OTAzNTQ2LTE3MTItNGE3YS05ZWM1LTE4ZDFjNDYyNmQwMSIsImJpVG9rZW4iOiJlN2I2N2U1NC02ZTRlLTAzYmItMmYxZC1lODkyYjg2NDcyNmYiLCJzaXRlT3duZXJJZCI6ImYyOTIzZGEwLTNhNzAtNGQyNi04ZDgwLWIzMjI3ZTlmZTk3MyIsInNpdGVJc1RlbXBsYXRlIjp0cnVlfQ&amp;locale=fr&amp;pageId=mainPage&amp;siteRevision=34&amp;viewMode=site&amp;viewerCompId=hzi591ja&amp;width=980#calendar"></use></svg></wix-svg>
+          <span id="check-in-value" class="ng-binding"></span>
+          <span translate="DD MM YYYY" ng-show="!filters.checkIn" class="ng-scope">DD MM YYYY</span>
+        </button>
+      </li>
+      <li class="check-out" role="presentation">
+        <label id="check-out-label" for="check-out" stranslate="widget.CHECK_OUT"><span class="strans">Départ</span></label>
+        <button wix-date-picker="" tabindex="0" type="button" ng-model="filters.checkOut" id="check-out" mark="markCheckout" after="1593475200000" trigger-on="[['check-in-selected', 'click'], ['focus:check_out', 'focus']]" trigger-bubble="" name="check_out" class="s-field s-separator ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty" aria-labelledby="check-out-label" aria-describedby="check-out-value" aria-expanded="false">
+          <wix-svg icon="calendar" class="icon"><svg viewBox="0 0 200 200"><use xlink:href="https://hotels.wixapps.net/search-widget.html?cacheKiller=1593398924926&amp;compId=hzi591ja&amp;deviceType=desktop&amp;height=89&amp;instance=FIkD67utDtxeVnGd3nHJjo3odcyzuiZHmfq92yc3TD0.eyJpbnN0YW5jZUlkIjoiOWRlZTUxMjUtNmU4Yi00YzQwLWE3OTYtYjBlODZjNWIxMmYxIiwiYXBwRGVmSWQiOiIxMzVhYWQ4Ni05MTI1LTYwNzQtNzM0Ni0yOWRjNmEzYzliY2YiLCJtZXRhU2l0ZUlkIjoiN2E1ODJmNzEtMDBjNS00ZmZiLTg4OGItNTg3YWQ0M2Y2MDllIiwic2lnbkRhdGUiOiIyMDIwLTA2LTI5VDA3OjU0OjIzLjE3M1oiLCJkZW1vTW9kZSI6dHJ1ZSwib3JpZ2luSW5zdGFuY2VJZCI6ImY2OTU1N2U4LTlhOTMtNDE4OC1iNDhlLTc4YWFhYzJkMTEzMCIsImFpZCI6IjY4OTAzNTQ2LTE3MTItNGE3YS05ZWM1LTE4ZDFjNDYyNmQwMSIsImJpVG9rZW4iOiJlN2I2N2U1NC02ZTRlLTAzYmItMmYxZC1lODkyYjg2NDcyNmYiLCJzaXRlT3duZXJJZCI6ImYyOTIzZGEwLTNhNzAtNGQyNi04ZDgwLWIzMjI3ZTlmZTk3MyIsInNpdGVJc1RlbXBsYXRlIjp0cnVlfQ&amp;locale=fr&amp;pageId=mainPage&amp;siteRevision=34&amp;viewMode=site&amp;viewerCompId=hzi591ja&amp;width=980#calendar"></use></svg></wix-svg>
+          <span id="check-out-value" class="ng-binding"></span>
+          <span translate="DD MM YYYY" ng-show="!filters.checkOut" class="ng-scope">DD MM YYYY</span>
+        </button>
+      </li>
+      <li class="adults" role="presentation">
+        <label id="adults-label" for="adults" stranslate="widget.ADULTS"><span class="strans">Adultes</span></label>
+        <div class="s-separator s-field spinner ng-isolate-scope ng-not-empty ng-valid" aria-valuenow="1" aria-valuetext="1" wix-spinner="" id="adults" tabindex="0" min="1" ng-model="filters.adults" aria-labelledby="adults-label" role="slider" aria-valuemin="1">
+  <span ng-show="isNumber()" class="value ng-binding">1</span>
+  <span ng-hide="isNumber()" class="placeholder ng-binding ng-hide"></span>
+  <span class="label ng-binding" ng-bind="label"></span>
+  <a role="button" tabindex="-1" href="#" ng-disabled="isMax()" ng-click="up($event)" class="up" aria-label="Augmentation"></a>
+  <a role="button" tabindex="-1" href="#" ng-disabled="isMin()" ng-click="down($event)" class="down" aria-label="Diminution" disabled="disabled"></a>
+</div>
+      </li>
+      <li class="children" role="presentation">
+        <label id="children-label" for="children" stranslate="widget.KIDS"><span class="strans">Enfants</span></label>
+        <div class="s-separator s-field spinner ng-isolate-scope ng-not-empty ng-valid" aria-valuenow="0" aria-valuetext="0" wix-spinner="" id="children" tabindex="0" min="0" ng-model="filters.children" aria-labelledby="children-label" role="slider" aria-valuemin="0">
+  <span ng-show="isNumber()" class="value ng-binding">0</span>
+  <span ng-hide="isNumber()" class="placeholder ng-binding ng-hide"></span>
+  <span class="label ng-binding" ng-bind="label"></span>
+  <a role="button" tabindex="-1" href="#" ng-disabled="isMax()" ng-click="up($event)" class="up" aria-label="Augmentation"></a>
+  <a role="button" tabindex="-1" href="#" ng-disabled="isMin()" ng-click="down($event)" class="down" aria-label="Diminution" disabled="disabled"></a>
+</div>
+      </li>
+      <li class="search" role="presentation">
+        <label>&nbsp;</label>
+        <button ng-click="filter($root.endpoint)" wix-bi="SEARCH" wix-bi-args="getBookingParams()" type="submit" tabindex="0" class="s-button">
+          <span stranslate="widget.SEARCH"><span class="strans">Rechercher</span></span>
+        </button>
+      </li>
+    </ul>
+  </form>
+</div>
+</div><!-- end ngIf: $root.languageResolved -->
+    </div>
+
+    <!-- CDNified -->
+    <script src="index_data/angular.js"></script>
+    <script src="index_data/angular-resource.js"></script>
+    <script src="index_data/angular-translate.js"></script>
+
+    <script src="index_data/raven.js" crossorigin="anonymous"></script>
+    <script>Raven.config('https://c0aea4032fa14b7c83206a809e7aee76@sentry.io/1071539').install();</script>
+
+    <!--  -->
+<script src="search-widget_data/search-widget.js"></script>
+<!--  -->
+
+    <!--  -->
+
+<script>
+  (function () {
+
+  var originUrl = '//' + window.location.host;
+  var baseUrl = 'https://hotels.wixapps.net' || originUrl;
+  var staticsUrl = 'https://static.parastorage.com/services/hotels-statics/1.677.0/';
+  var backofficeUrl = '';
+  var partialsUrl = staticsUrl.replace(/^.*:?\/\/+[^\/]*/, originUrl).replace('/services/', '/_partials/');
+  var translationsUrl = '//static.parastorage.com/services/hotels-translation-statics/1.698.0/';
+  var hotel = angular.module('hotel');
+
+  hotel.constant('clientConfig', {
+    originUrl: originUrl,
+    baseUrl: baseUrl,
+    apiUrl: baseUrl + '/api',
+    backofficeUrl: backofficeUrl,
+    staticsUrl: staticsUrl,
+    partialsUrl: partialsUrl,
+    startPremiumUrl: '',
+    biUrl: '//frog.wix.com',
+    returnUrl: '',
+    translationsUrl: translationsUrl,
+    visitorToken: '',
+    locale: 'fr'
+  });
+  
+  hotel.constant('paymentsConfig', {
+    stripePublishableKey: '',
+    stripeConnectUrl: '',
+    paypalConnectUrl: '',
+    cashierCheckoutFormUrl: 'https://cashier.wix.com/render/cashier_payment_iframe?app=135aad86-9125-6074-7346-29dc6a3c9bcf'
+  });
+
+  hotel.constant('hotelConfig', {
+    minimalTimestamp: '1593381264458',
+    zoneId: 'Pacific/Honolulu',
+    hotelConfigured: ('false' === 'true'),
+    roomsCount: '0',
+    mode: 'live',
+    hotelState: parseJson('{"roomCount":0,"paymentOK":false,"settingsOK":false,"hotelReady":false,"upgraded":false,"trialDays":0,"roomUnitCount":null,"hasCoupons":null,"hasRates":null,"hasExtraCharges":null,"hasConfirmationEmail":null,"hasReservations":null,"hasRooms":null}')
+  });
+
+  hotel.constant('hotelState', parseJson('{"roomCount":0,"paymentOK":false,"settingsOK":false,"hotelReady":false,"upgraded":false,"trialDays":0,"roomUnitCount":null,"hasCoupons":null,"hasRates":null,"hasExtraCharges":null,"hasConfirmationEmail":null,"hasReservations":null,"hasRooms":null}'));
+
+  hotel.constant('siteConfig', parseJson('{"ownerUserId":"f2923da0-3a70-4d26-8d80-b3227e9fe973","metasiteId":null,"id":"","environment":"production","isOwner":false,"visitorId":"68903546-1712-4a7a-9ec5-18d1c4626d01","uid":"","instanceId":"9dee5125-6e8b-4c40-a796-b0e86c5b12f1","templateId":"f69557e8-9a93-4188-b48e-78aaac2d1130","vendorPackageOffer":"sale_monthly","isWixStaff":false,"isPublished":false,"liveChatAppId":"14517e1a-3ff0-af98-408e-2bd6953c36a2","hasOneApp":null,"userMediaManagerToken":null}'));
+
+  hotel.constant('features', parseJson('{"maxRoomUnits":9999,"enabledPaymentMethods":["Offline","Stripe","PayPal","MercadoPago"],"badgeHidden":false,"personalSaleVisible":false,"personalSaleDaysRemaining":0}'));
+
+  hotel.constant('experiments', experimentsUrlOverride(parseJson('{"hotels.EnableMetaSitesForCashier":"true","ReservationCreatedPingNotification":"true","hotels.EnableStripePSD2Compliance":"false","RetrieveMissingPayPalEmail":"true","SitePropertiesUpgradeToV4":"true","hotels.CashierV2Checkout":"true","CashierV2IntegrationFixes":"true","hotels.EnableDefaultHotelsOfflineText":"true","UseCashierForStripe":"true"}', true)));
+
+  hotel.service('customExperiments', function() {
+    return {
+    }
+  });
+
+  hotel.run(function($injector) {
+    if ($injector.has('bi')) {
+      $injector.get('bi').log({
+        _title: 'App_View'
+      });
+    }
+  });
+
+  function experimentsUrlOverride (experiments)  {
+    for (ex in experiments) {
+      if (experiments.hasOwnProperty(ex)) {
+        var re = new RegExp(ex + '=([^&]*)');
+        var matches = window.location.search.match(re);
+        if (matches && matches[1]) {
+          experiments[ex] = JSON.parse(matches[1]);
+        }
+      }
+    }
+    return experiments;
+  }
+
+  function parseJson (jsonString, convert) {
+    try {
+      var json = angular.fromJson(jsonString);
+      return convert ? fixJson(json) : json;
+    } catch (e) {}
+    return {};
+  }
+
+  function fixJson (fact) {
+    var bool = {'true': true, 'false': false};
+    angular.forEach(fact, function (val, key) {
+      if (val in bool) {
+        fact[key] = bool[val];
+      }
+    });
+    return fact;
+  }
+
+  })();
+</script>
+  
+
+</body></html>
