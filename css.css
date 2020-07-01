@@ -101,3 +101,16 @@ h3 {
  margin-left: -70%
 }
 
+.images_region{
+   width: 200px; 
+   float: left; 
+   margin: 2%;
+}
+
+.activite{
+    margin: 1%;
+    width: 750px;
+    margin-left: 25%;
+    background-color:rgba(245, 255, 250, 0.7); 
+    border: 1px solid #60050596
+}
