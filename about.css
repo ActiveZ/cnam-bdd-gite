@@ -1,15 +1,12 @@
 body {
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    background-color: #e9967a;
+    background-color:darksalmon;
 }
 
-section {
+#about {
     width: 80%;
 }
 
-div {
+#about div {
     margin: 20px;
 }
 
@@ -30,8 +27,9 @@ div {
 
 #infos {
     float: right;
+    text-align: justify;
     width: 50%;
-    height: 150px;
+    height: 190px;
     border: solid 3px green;
     padding: 10px;
 }
