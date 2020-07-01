@@ -1,0 +1,41 @@
+body {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+section {
+    width: 80%;
+    border: solid 3px red;
+}
+
+#gite1 {
+    background-image: url("images/gite/gite1.jpg");
+    background-repeat: no-repeat;
+    height: 500px;
+    background-size: contain;
+}
+
+#gite2 {
+    background-image: url("images/gite/gite2.jpg");
+    background-repeat: no-repeat;
+    height: 200px;
+    background-size: contain;
+}
+
+#lit {
+    background-image: url("images/gite/lit.jpg");
+    background-repeat: no-repeat;
+    height: 200px;
+    background-size: contain
+}
+
+#infos {
+    width: 15%;
+    height: 300px;
+    border: solid 3px green;
+    /* align-items: center; */
+    text-align: justify;
+    justify-content: center;
+    padding: 15px;
+}
